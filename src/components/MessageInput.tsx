@@ -31,7 +31,7 @@ export const MessageInput = ({
               value={inputMessage}
               onChange={(e) => onInputChange(e.target.value)}
               onKeyPress={onKeyPress}
-              placeholder="Compartilhe o que está em seu coração... (Enter para enviar)"
+              placeholder="Como você está se sentindo... (Enter para enviar)"
               className={`w-full px-5 py-4 pr-16 border border-${currentPalette.border} dark:border-gray-600 rounded-2xl focus:ring-2 focus:ring-${currentPalette.accent} focus:border-transparent dark:bg-gray-700/50 dark:text-white resize-none backdrop-blur-sm bg-white/50 transition-all duration-2000 ease-in-out`}
               rows={1}
               style={{ minHeight: '56px', maxHeight: '120px' }}
