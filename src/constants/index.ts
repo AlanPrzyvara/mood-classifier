@@ -70,18 +70,16 @@ export const MOOD_PALETTES: Record<MoodType, MoodPalette> = {
 }
 
 // Mensagens de boas-vindas personalizadas
-export const WELCOME_MESSAGES = [
-  "Olá! Meu nome é Sofia. Estou aqui para ouvir você com carinho e sem julgamentos. Como você está se sentindo hoje?",
-  "Oi! Sou a Sofia, sua psicóloga virtual. Este é um espaço seguro para você compartilhar o que está em seu coração. O que gostaria de conversar?",
-  "Olá, querido(a)! Eu sou a Sofia. Estou aqui para te acompanhar nesta jornada de autoconhecimento. Como posso te ajudar hoje?"
-]
+// export const WELCOME_MESSAGES = [
+//   // "Como você está se sentindo?",
+//   // "O que você está sentindo?",
+//   // "Sobre o que você gostaria de conversar?",
+// ]
 
 // Sugestões de conversa
 export const CONVERSATION_STARTERS = [
-  "Estou me sentindo ansioso(a) ultimamente",
-  "Preciso de ajuda com meus relacionamentos",
-  "Estou passando por um momento difícil",
-  "Quero melhorar minha autoestima",
-  "Estou com dificuldades no trabalho",
-  "Sinto que preciso de orientação"
+  "Não tô nada bem hoje... acordei com uma angústia estranha, parece que tudo tá pesado. Até coisas simples, como levantar da cama ou responder mensagens, estão me parecendo um esforço enorme. Eu só queria ficar quieto no meu canto e esquecer um pouco do mundo.",
+  "Eu não tô mal, mas também não tô bem. É tipo aquele estado neutro em que nada empolga muito, mas também não chega a doer. Só mais um dia passando, sem grandes emoções. Acho que dá pra chamar isso de 'tanto faz'.",
+  "Eu tô radiante! Recebi uma notícia maravilhosa: finalmente passei naquela seleção que eu queria tanto. Sério, é uma sensação de conquista gigante. Não consigo parar de sorrir, parece que todo esforço valeu a pena.",
+  "Hoje tô bem tranquilo, sem pressa pra nada. Consegui organizar minhas coisas, ouvir uma música leve e até tomar um café sem correria. Não tenho grandes preocupações na cabeça agora, só estou curtindo o momento e deixando o dia seguir no ritmo dele."
 ]

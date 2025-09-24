@@ -1,6 +1,7 @@
 'use client'
 
 import { MoodPalette } from '../types'
+import { PsychologyIcon } from './Icons'
 
 interface TypingIndicatorProps {
   currentPalette: MoodPalette
@@ -11,7 +12,7 @@ export const TypingIndicator = ({ currentPalette }: TypingIndicatorProps) => {
     <div className="flex justify-start">
       <div className="flex items-start space-x-3">
         <div className={`flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-r ${currentPalette.primary} text-white flex items-center justify-center text-lg transition-all duration-2000 ease-in-out`}>
-          🌸
+          <PsychologyIcon className="w-5 h-5" />
         </div>
         <div className={`bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-${currentPalette.border}/50 dark:border-gray-600 rounded-2xl rounded-bl-md px-5 py-4 transition-all duration-2000 ease-in-out`}>
           <div className="flex items-center space-x-2">

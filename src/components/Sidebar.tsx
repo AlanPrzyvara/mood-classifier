@@ -2,6 +2,7 @@
 
 import { ChatSession, MoodPalette } from '../types'
 import { formatTimestamp } from '../utils'
+import { ChatIcon, PlusIcon, TrashIcon, CloseIcon } from './Icons'
 
 interface SidebarProps {
   showSidebar: boolean
@@ -28,21 +29,23 @@ export const Sidebar = ({
     <div className={`${showSidebar ? 'w-80' : 'w-0'} transition-all duration-300 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-r border-${currentPalette.border}/50 dark:border-${currentPalette.darkBorder} flex flex-col overflow-hidden`}>
       <div className={`p-6 border-b border-${currentPalette.border}/50 dark:border-${currentPalette.darkBorder} transition-all duration-2000 ease-in-out`}>
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-semibold text-gray-800 dark:text-white">
-            💬 Nossas Conversas
+          <h2 className="text-lg font-semibold text-gray-800 dark:text-white flex items-center gap-2">
+            <ChatIcon className="w-5 h-5" />
+            Nossas Conversas
           </h2>
           <button
             onClick={onToggleSidebar}
             className={`p-2 text-gray-500 hover:text-${currentPalette.accent} dark:text-gray-400 dark:hover:text-${currentPalette.accent} transition-all duration-2000 ease-in-out`}
           >
-            ✕
+            <CloseIcon className="w-4 h-4" />
           </button>
         </div>
         <button
           onClick={onCreateNewSession}
-          className={`w-full px-4 py-3 bg-gradient-to-r ${currentPalette.button} text-white rounded-xl hover:${currentPalette.buttonHover} transition-all duration-2000 ease-in-out text-sm font-medium shadow-lg hover:shadow-xl`}
+          className={`w-full px-4 py-3 bg-gradient-to-r ${currentPalette.button} text-white rounded-xl hover:${currentPalette.buttonHover} transition-all duration-2000 ease-in-out text-sm font-medium shadow-lg hover:shadow-xl flex items-center justify-center gap-2`}
         >
-          ✨ Nova Conversa
+          <PlusIcon className="w-4 h-4" />
+          Nova Conversa
         </button>
       </div>
       
@@ -76,7 +79,7 @@ export const Sidebar = ({
                 }}
                 className="ml-2 text-gray-400 hover:text-red-500 transition-all duration-2000 ease-in-out p-1"
               >
-                🗑️
+                <TrashIcon className="w-4 h-4" />
               </button>
             </div>
           </div>

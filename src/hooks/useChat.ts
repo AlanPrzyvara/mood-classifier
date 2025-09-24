@@ -27,7 +27,7 @@ export const useChat = () => {
   // Gera contexto dinâmico baseado na conversa
   const generateContext = useCallback((conversationMessages: Message[]): Record<string, string> => {
     const context: Record<string, string> = {
-      system: "Você é Sofia, uma psicóloga virtual empática, calorosa e profissional. Seu estilo é acolhedor, sem julgamentos, e você sempre oferece suporte baseado em evidências científicas. Use linguagem natural, carinhosa mas profissional. Responda como uma psicóloga real conversaria com seu paciente, sendo genuína e humana.",
+      system: "",
       conversation_summary: "",
       user_preferences: "",
       current_topic: ""
@@ -100,7 +100,7 @@ export const useChat = () => {
         max_tokens: CHAT_CONFIG.MAX_TOKENS
       }
 
-      const response = await fetch('http://localhost:2508/v1/chat/completions', {
+      const response = await fetch('https://fossil-associations-permissions-owned.trycloudflare.com/v1/chat/completions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

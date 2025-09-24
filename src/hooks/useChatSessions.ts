@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react'
 import { ChatSession, Message, MoodType } from '../types'
-import { CHAT_CONFIG, WELCOME_MESSAGES } from '../constants'
+import { CHAT_CONFIG } from '../constants'
 import { generateId } from '../utils'
 
 export const useChatSessions = () => {
@@ -36,13 +36,13 @@ export const useChatSessions = () => {
   // Cria nova sessão
   const createNewSession = useCallback(() => {
     const newSessionId = generateId()
-    const welcomeMessage = WELCOME_MESSAGES[Math.floor(Math.random() * WELCOME_MESSAGES.length)]
+    // const welcomeMessage = WELCOME_MESSAGES[Math.floor(Math.random() * WELCOME_MESSAGES.length)]
     
     const newSession: ChatSession = {
       id: newSessionId,
       messages: [{
         role: 'assistant',
-        content: welcomeMessage,
+        content: '',
         timestamp: Date.now(),
         id: generateId()
       }],

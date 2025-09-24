@@ -2,6 +2,7 @@
 
 import { MoodPalette } from '../types'
 import { CONVERSATION_STARTERS } from '../constants'
+import { PsychologyIcon } from './Icons'
 
 interface WelcomeScreenProps {
   currentPalette: MoodPalette
@@ -11,7 +12,11 @@ interface WelcomeScreenProps {
 export const WelcomeScreen = ({ currentPalette, onSelectStarter }: WelcomeScreenProps) => {
   return (
     <div className="text-center text-gray-600 dark:text-gray-400 mt-16">
-      <div className="text-8xl mb-6">🌸</div>
+      <div className="mb-6 flex justify-center">
+        <div className={`p-6 rounded-full bg-gradient-to-r ${currentPalette.primary} text-white`}>
+          <PsychologyIcon className="w-16 h-16" />
+        </div>
+      </div>
       <h2 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">
         Bem-vindo(a) ao seu espaço seguro
       </h2>

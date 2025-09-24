@@ -2,6 +2,7 @@
 
 import { MoodPalette } from '../types'
 import { getTimeOfDay } from '../utils'
+import { MenuIcon, HeartIcon } from './Icons'
 
 interface HeaderProps {
   showSidebar: boolean
@@ -25,16 +26,13 @@ export const Header = ({
               onClick={onToggleSidebar}
               className={`p-2 text-gray-600 hover:text-${currentPalette.accent} dark:text-gray-400 dark:hover:text-${currentPalette.accent} transition-all duration-2000 ease-in-out`}
             >
-              ☰
+              <MenuIcon className="w-5 h-5" />
             </button>
           )}
           <div>
             <h1 className={`text-2xl font-bold bg-gradient-to-r ${currentPalette.primary} bg-clip-text text-transparent transition-all duration-2000 ease-in-out`}>
-              Sofia - Sua Psicóloga Virtual
+              Como você esta se sentindo?
             </h1>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Bom {getTimeOfDay()}! Estou aqui para te ouvir com carinho 💜
-            </p>
           </div>
         </div>
         <button

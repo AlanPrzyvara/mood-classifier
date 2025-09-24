@@ -2,6 +2,7 @@
 
 import { Message, MoodPalette } from '../types'
 import { formatTimestamp } from '../utils'
+import { UserIcon, PsychologyIcon } from './Icons'
 
 interface MessageBubbleProps {
   message: Message
@@ -18,7 +19,7 @@ export const MessageBubble = ({ message, currentPalette }: MessageBubbleProps) =
             ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white' 
             : `bg-gradient-to-r ${currentPalette.primary} text-white`
         }`}>
-          {message.role === 'user' ? '👤' : '🌸'}
+          {message.role === 'user' ? <UserIcon className="w-5 h-5" /> : <PsychologyIcon className="w-5 h-5" />}
         </div>
         
         {/* Message bubble */}
